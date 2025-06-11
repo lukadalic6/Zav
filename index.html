@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSK Livno</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+    height: 13vh;
+    padding-left: 25vh;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: darkred;
+    }
+
+    .btn-kontakt {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .btn-kontakt:hover {
+      background-color: darkred;
+    }
+        .srediste {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      height: 100vh;
+      background-image: url(prava.jpg) ;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      color: white;
+    }
+    .onama {
+  font-size: 2.2vh;
+  margin-top: 20px;
+  color: white;
+  position: relative;
+  background-color: red;
+  height: 5vh;
+  width: 15vh;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  
+}
+
+.popis-ljudi {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.ucenici {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 3vh;
+  align-items: center;
+  grid-column-start: 1;
+  grid-row-end: 2;
+}
+
+.djelatnici {
+display: flex;
+justify-content: center;
+text-align: center;
+align-items: center;
+flex-direction: column;
+font-size: 3vh;
+grid-column-start: 2;
+grid-column-end: 3;
+}
+
+.odjela {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3vh;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.pocetna-projekti {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.projekti {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: -25vh;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.dugmili {
+  font-size: 2.2vh;
+  margin-top: 20px;
+  color: white;
+  background-color: red;
+  height: 5vh;
+  width: 30vh;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+}
+
+.slika-projekata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25vh;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.pocetna-natjecaj {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.natjecaji {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin-top: 10vh;
+}
+
+.dugme-procitaj {
+  background-color: red;
+  height: 4vh;
+  width: 13vh;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+.slika-natjecaj {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 10vh;
+
+}
+
+.pocetna-uprava {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: rgb(20, 18, 18);
+  height: 45vh;
+  padding: 5vh;
+}
+
+.uprava-skole {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 30vh;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 10vh;
+  color: white;
+}
+
+.slika-uprava {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.dugme-procitaj-uprava {
+  background-color: red;
+  height: 4vh;
+  width: 13vh;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+}
+
+.pocetna-dnevne-aktivnosti {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.Dnevne-aktivnosti {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.ig-facebook {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin-left: 20vw;
+  margin-right: 25vw;
+  margin-top: 5vh;
+}
+
+.pocetna-predzdanji-dio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.predzdanji-dio {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: rgb(68, 68, 68);
+  color: white;
+}
+
+.dugme-kontaktirajte {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  height: 5vh;
+  width: 23vh;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 4vw;
+}
+
+.zadnji-dio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.zadnji-dio-sadrzaj {
+  grid-column-start: 1;
+  grid-column-end: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.zadnji-dio-sadrzaj a {
+  text-decoration: none;
+  color: black;
+}
+
+.kraj {
+  color: red;
+  padding-left: 19vw;
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="ssklivno_logo_2022.png" alt="">
+  <nav>
+    <a href="index.html">POČETNA</a>
+    <a href="o nama.html">O NAMA</a>
+    <a href="uprava.html">UPRAVA</a>
+    <a href="projekti.html">PROJEKTI</a>
+    <a href="natjecaji i objave.html">NATJEČAJI I OBJAVE</a>
+    <a href="https://gothru.co/PmiL0KxRr?index=scene_0&hlookat=0&vlookat=0&fov=120">SSK 360</a>
+    <a href="kontakti.html" class="btn-kontakt">KONTAKTI</a>
+  </nav>
+</header>
+<div class="srediste">
+    <h1 style="font-size: 8vh; margin-top: -11vh;">Srednja strukovna škola <br> Silvija Strahimira Kranjčevića</h1>
+    <h2 style="margin-top: -15px; font-size: 4.5vh;">Livno</h2>
+    <a href="o nama.html">
+    <button class="onama">O NAMA</button>
+    </a>
+</div>
+
+<div class="popis-ljudi">
+ <div class="ucenici">
+  <h1 style="color: red;">560+</h1>
+  <p>učenika</p>
+  </div>
+  <div class="djelatnici">
+  <h1 style="color: red;">75+</h1>
+  <p>djelatnika</p>
+  </div>
+
+  <div class="odjela">
+  <h1 style="color: red;">27+</h1>
+  <p>odjela</p>
+  </div>
+ 
+</div>
+
+<div class="pocetna-projekti">
+
+ <div class="projekti">
+  <h1>Projekti</h1>
+  <p>Svoju budućnost škola gradi na zanimljivim projektima i na suradnji s partnerima bez kojih bi neka naša ostvarenja još uvijek bila samo san.</p>
+  <a href="projekti.html">
+  <button class="dugmili">VISE O PROJEKTIMA</button>
+  </a>
+ </div>
+
+
+  <div class="slika-projekata">
+    <img src="Projekti_ssklivno.webp" alt="">
+  </div>
+
+</div>
+
+<div class="pocetna-natjecaj">
+  <div class="natjecaji">
+    <h1 style="font-size: 5vh;">Natječaji</h1>
+    <a href="natjecaji i objave.html">
+    <button class="dugme-procitaj">PROCITAJTE</button>
+    </a>
+  </div>
+  <div class="slika-natjecaj">
+    <img style="width: 60vh;" src="natjecaji_1sskLivno.jpg" alt="">
+  </div>
+</div>
+
+<div class="pocetna-uprava">
+  <div class="uprava-skole">
+    <h1 style="font-size: 5vh;">Uprava škole</h1>
+    <a href="uprava.html">
+    <button class="dugme-procitaj-uprava">PROCITAJTE</button>
+    </a>
+  </div>
+
+  <div class="slika-uprava">
+    <img src="Upravaskole_ssklivno.jpg" alt="">
+  </div>
+</div>
+
+<div class="pocetna-dnevne-aktivnosti">
+  <div class="Dnevne-aktivnosti">
+    <h1 style="font-size: 5vh;">Dnevne aktivnosti</h1>
+    <p style="font-size: 2vh;">Svakodnevne aktivnosti škole možete pratiti na našim službenim stranicama na društvenim mrežama.</p>
+  </div>
+
+  <div class="ig-facebook">
+    <a href="https://www.facebook.com/srednjastrukovnaskolalivno/" target="_blank"> <!-- target blank znaci da otvori stranicu u novom tabu -->
+    <img style="width: 38vh; height: 20vh;" src="Facebook-Logo-2013.png" alt="">
+    </a>
+    <a href="https://www.instagram.com/ssklivno/" target="_blank">
+    <img style="width: 20vh; height: 20vh;" src="ig logo.png" alt="">
+    </a>
+  </div>
+</div>
+
+<div class="pocetna-predzdanji-dio">
+  <div class="predzdanji-dio">
+    <h1 style="font-size: 4vh;">"S inovacijom u učionici mijenjamo svijet <br> zajedno!"</h1>
+    <a href="kontakti.html">
+    <button class="dugme-kontaktirajte">KONTAKTIRAJTE NAS</button>
+    </a>
+  </div>
+</div>
+
+<div class="zadnji-dio">
+  <div class="zadnji-dio-sadrzaj">
+    <a href="kontakti.html"><li>Kontakti</li></a>
+    <a href="natjecaji i objave.html"><li>Natječaji i objave</li></a>
+    <a href="o nama.html"><li>O nama</li></a>
+    <a href="index.html"><li>Početna</li></a>
+    <li>Pravila pisanja završnog rada</li>
+    <a href="projekti.html"><li>Projekti</li></a>
+    <li>Struke i zanimanja</li>
+    <a href="uprava.html"><li>Uprava</li></a>
+  </div>
+</div>
+
+<div class="kraj">
+  <p>Powered by SSK | 2025.</p>
+</div>
+
+</body>
+</html>
